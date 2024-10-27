@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Page Appearance Changer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif, "Times New Roman", Times, serif,
+          "Courier New", Courier, monospace;
+        transition: background-color 0.3s, color 0.3s;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 20px;
+      }
+
+      .dark-mode {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dynamic Page Appearance Changer</h1>
+      <p>Demonstrasi perubahan tampilan layar.</p>
+      <div>
+        <label for="bgColor">Ganti warna layar:</label>
+        <select id="bgColor" onchange="changeBackgroundColor()">
+          <option value="">Select Color</option>
+          <option value="lightblue">Light Blue</option>
+          <option value="lightgreen">Light Green</option>
+          <option value="lightcoral">Light Coral</option>
+          <option value="lightpink">Light Pink</option>
+          <option value="cyan">Cyan</option>
+        </select>
+      </div>
+      <div>
+        <label for="fontSize">Ganti Ukuran Font:</label>
+        <button id="increaseFont" onclick="increaseFont()">Increase</button>
+        <button id="decreaseFont" onclick="decreaseFont()">Decrease</button>
+      </div>
+      <div>
+        <button id="toggleDarkMode" onclick="toggleDarkMode()">
+          Toggle Dark Mode
+        </button>
+      </div>
+      <div>
+        <label for="fontStyle">Ganti Tema Font:</label>
+        <select id="fontStyle" onchange="changeFontStyle()">
+          <option value="Arial, sans-serif">Sans Serif</option>
+          <option value="Times New Roman, serif">Serif</option>
+          <option value="Courier New, monospace">monospace</option>
+        </select>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
